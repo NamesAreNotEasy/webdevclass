@@ -1,0 +1,469 @@
+/*  Author: Lukas Cimera
+	Date: 10-13-2020
+	File Name: styles.css
+*/
+
+/* CSS reset */
+body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, article, section, aside, table, audio, video
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+}
+
+/* Style Rules body & img */
+body
+{
+	background-color: #000;
+}
+
+img, video
+{
+	max-width: 100%;
+	display: block;
+}
+video {
+	margin: 0 auto 4%;
+}
+
+/* Style rule for box sizing applies to all elements */
+* {
+	box-sizing: border-box;
+}
+
+/* Style rules for Mobile */
+
+
+/* Style Rules for Header and Nav */
+header
+{
+	top: 0;
+	background-color: #000;
+	height: 190px;
+}
+
+header img
+{
+	margin: 0 auto;
+}
+
+nav
+{
+	padding: 1%;
+	margin-bottom: 1%;
+}
+
+nav ul
+{
+	list-style-type: none;
+	text-align: center;
+}
+
+nav li
+{
+	font-size: 1.5em;
+	border-top: 1px solid #fff;
+	font-family: 'Francois One', sans-serif;
+}
+
+nav li a
+{
+	display: block;
+	color: #fff;
+	padding: .5em 1em;
+	text-decoration: none;
+}
+
+nav li:first-child
+{
+	border-top: none;
+}
+
+/* Style rules for main */
+main
+{
+	text-align: left;
+	background-color: #fff;
+	padding: 2%;
+	font-size: 1.15em;
+	/*clear: left;*/
+	font-family: 'Roboto Slab', serif;
+}
+
+.mobile h3
+{
+	text-shadow: 5px 5px 8px #ccc;
+}
+
+article
+{
+	padding: 2%;
+}
+
+article h3
+{
+	text-align: center;
+}
+
+article ul
+{
+	margin-left: 10%;
+}
+
+article:nth-of-type(2)
+{
+	background-color: rgba(204, 204, 204, 0.3);
+}
+
+article img
+{
+	margin: 0 auto;
+}
+
+/* Style rules for footer */
+footer p
+{
+	color: #fff;
+	font-size: .75em;
+	text-align: center;
+	padding:  0 1em;
+}
+footer p a
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+/* CSS class styles */
+.action
+{
+	font-size: 1.35em;
+	color: #666600;
+	font-weight: bold;
+	text-shadow: 5px 5px 8px #CCC;
+}
+
+.external-link
+{
+	color: #666600;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.map
+{
+	border: 2px solid #000;
+	width: 95%;
+	height: 50%;
+}
+
+/* Show mobile class, hide tablet-desktop*/
+.mobile
+{
+	display: block;
+}
+.tablet-desktop
+{
+	display: none;
+}
+
+.tel-link {
+	background-color: #404040;
+	padding: 2%;
+	margin: 0 auto;
+	width: 80%;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.tel-link a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.5em;
+	display: block;
+}
+
+.hours {
+	margin-left: 10%;
+}
+
+.round
+{
+	border-radius: 8px;
+}
+
+.frame
+{
+	position: relative;
+	max-width: 450px;
+	margin: 2% auto;
+}
+
+.pic-text
+{
+	position: absolute;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	color: #FFF;
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+/* CSS div styles */
+#contact
+{
+	text-align: center;
+}
+
+#contact .contact-email-link
+{
+	color: #660;
+	text-decoration: none;
+}
+
+#weights, #cardio, #training
+{
+	margin: 0 2%;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 630px), print
+{
+	/* Tablet Viewport: show tablet-desktop, hide mobile class */
+	.tablet-desktop
+	{
+		display: block;
+	}
+
+	.mobile
+	{
+		display: none;
+	}
+	header
+	{
+		position: static;
+		padding-bottom: 2%;
+	}
+	/* Tablet Viewport: Style rules for nav area */
+	nav li
+	{
+		display: inline-block;
+		border-top: none;
+		border-left: 1px solid #FFF;
+	}
+	nav li:first-child
+	{
+		border-left: none;
+	}
+	nav li above
+	{
+		padding: .1em .75em;
+	}
+	/* Tablet viewport: main content area */
+	main ul
+	{
+		margin: 0 0 4% 10%
+	}
+
+	.grid
+	{
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-gap: 20px;
+	}
+
+	aside
+	{
+		display: block;
+		grid-template-columns: auto auto;
+	}
+
+	.pic-text
+	{
+		font-size: 1em;
+		padding: 10px;
+	}
+
+	.frame
+	{
+		opacity: .9;
+	}
+
+	.frame:hover
+	{
+		opacity: 1;
+		box-shadow: 8px 8px 10px #808080;
+	}
+
+	#exercises
+	{
+		clear: left;
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
+		background: linear-gradient(to right, #CCC, #FFF);
+		padding: 1% 2%;
+	}
+
+	#exercises dt
+	{
+		font-weight: bold;
+	}
+
+	#exercises dd
+	{
+		padding: 0.5% 1% 2% 0%;
+	}
+	.tel-num
+	{
+		font-size: 1.25em;
+	}
+	.map
+	{
+		width: 600px;
+		height: 450px;
+	}
+	/* Tablet Viewport: Style rules for table */
+	table{
+		border: 1px solid #000;
+		border-collapse: collapse;
+		margin: 0 auto;
+		width: 100%;
+	}
+	caption{
+		font-size: 1.5em;
+		font-weight: bold;
+		padding: 1%
+	}
+	th, td{
+		border: 1px solid #000;
+		padding: 2%;
+	}
+	th{
+		background-color: #000;
+		color: #fff;
+		font-size: 1.15em;
+	}
+	tr:nth-child(odd){
+		background-color: #ccc;
+	}
+	aside
+	{
+		text-align: center;
+		font-size: 1.25em;
+		font-style: italic;
+		font-weight: bold;
+		padding: 2%;
+		background-color: rgba(204, 204, 204, .5);
+		box-shadow: 5px 5px 8px #000;
+		text-shadow: 5px 5px 5px #b3b3b3;
+		border-radius: 0 15px;
+	}
+
+	.grid-item4
+	{
+		grid-column: 1 / span 3;
+	}
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1013px), print
+{
+	/* Desktop Viewport: Style rule for header */
+	header
+	{
+		width: 25%;
+		float: left;
+		padding-bottom: 0;
+	}
+
+	/* Desktop Viewport: Style rule for nav */
+	nav
+	{
+		width: 70%;
+		float: right;
+		margin: 4em 1em 0 0;
+	}
+
+	nav ul
+	{
+		text-align: right;
+	}
+	nav li
+	{
+		border: none;
+	}
+	nav li a
+	{
+		padding: .5em 1em;
+	}
+
+	nav li a:hover
+	{
+		background-color: #FFF;
+		color: #000;
+	}
+
+	/* Desktop Viewport: Style rule for main */
+	main
+	{
+		clear: left;
+	}
+
+	main h1
+	{
+		font-size: 1.8em;
+	}
+
+	article h3
+	{
+		font-size: 1.75em;
+	}
+
+	.pic-text
+	{
+		font-size: 1.5em;
+		padding: 20px;
+	}
+
+	#weights, #cardio, #training
+	{
+		float: left;
+		margin: 0 2%;
+		display: inline-block;
+		width: 29%;
+	}
+
+	#exercises
+	{
+		clear: left;
+	}
+}
+
+/*Media query for large desktop viewport*/
+@media screen and (min-width: 1921px), print
+{
+	#container
+	{
+		width: 1920px;
+		margin: 0 auto;
+	}
+
+	table{
+		width:80%;
+	}
+}
+
+/* Media query to print */
+@media print
+{
+	body
+	{
+		background-color: #fff;
+		color: #000;
+	}
+
+}
