@@ -48,6 +48,24 @@ header img
 	margin: 0 auto;
 }
 
+.mobile-nav a{
+	color: #fff;
+	font-family: "Francois One", sans-serif;
+	text-align: center;
+	font-size: 2em;
+	text-decoration: none;
+	padding: 3%;
+	display: block;
+}
+
+.mobile-nav a.menu-icon{
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+}
+
 nav
 {
 	padding: 1%;
@@ -98,7 +116,12 @@ main
 	/*clear: left;*/
 	font-family: 'Roboto Slab', serif;
 }
-
+.mobile{
+	display:block;
+}
+.tablet-desktop, #menu-links{
+	display:none;
+}
 .mobile h3
 {
 	text-shadow: 5px 5px 8px #ccc;
@@ -167,14 +190,7 @@ footer p a
 }
 
 /* Show mobile class, hide tablet-desktop*/
-.mobile
-{
-	display: block;
-}
-.tablet-desktop
-{
-	display: none;
-}
+
 
 .tel-link {
 	background-color: #404040;
@@ -247,7 +263,7 @@ footer p a
 		display: block;
 	}
 
-	.mobile
+	.mobile, .mobile-nav
 	{
 		display: none;
 	}
